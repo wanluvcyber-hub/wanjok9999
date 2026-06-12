@@ -1,6 +1,16 @@
 {
   "version": 2,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+  "framework": "vite",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
   ]
 }
